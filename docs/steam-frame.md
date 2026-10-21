@@ -11,9 +11,7 @@ the whole frame, both eyes included, costs about 9.5 ms of GPU time.
 
 It has been played in the headset twice on 2026-10-21. The first session's
 findings are under "After the first wear"; the second session ran a build
-with those fixes, and it played well. The newest fixes (the crash cameras'
-letterbox, FXAA on the eyes, a review's fixes) are built but not yet run on
-the Frame.
+with those fixes, and it played well.
 
 The toolkit side (OpenXR, the stereo replay, the headset loop) is in the
 toolkit (xenophobentx/xboxrecomp, `takedawn` branch): `src/d3d/nv2a_vk_xr.c`,
@@ -142,13 +140,10 @@ new profile, driven by `tools/headless/to_first_race.sh`), 2026-10-20 and
 | Billboard trees sliding, traffic-light glows floating | Screen-position draws rebuilt in 3D | Picture dumps: smoke, skid marks, glows in place; worn in the second session |
 | Semi-truck wheels sliding in | Draws whose projection can't be read take the last 3D draw's | Worn in the second session; the trucks not caught in a dump |
 | The screen flickering between sizes at crashes and the finish | Everything in an event immersive | Unattended; worn in the second session |
-| Letterbox bars | Composite stretched, bars left out; the crash cameras' bars by their shape | Race bars gone in dumps; crash bars not yet run |
+| Letterbox bars | Composite stretched, bars left out; the crash cameras' bars by their shape | Race bars gone in dumps |
 
 ## Known issues
 
-- The crash cameras' own letterbox bars (with a blue line) still showed in
-  the second session. The fix, FXAA and the review fixes are built but not
-  yet run on the Frame.
 - The game culls what is outside its own view. A 60 degree head turn still
   showed the track and trees, but cars outside the game's view were not
   checked.

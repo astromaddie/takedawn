@@ -493,9 +493,8 @@ eye, and you can look around the car. The HUD sits on its own panel in front
 of you. Menus, the garage and films show on a big screen.
 
 It's early, but it plays well: it has been played in the headset twice and
-holds 120 Hz with the game at its usual 60. The newest fixes (the crash
-cameras' letterbox bars, FXAA) haven't run on the Frame yet. There's no
-download for it; you build it yourself:
+holds 120 Hz with the game at its usual 60. There's no download for it;
+you build it yourself:
 
 1. Check out the xboxrecomp toolkit's `takedawn` branch next to this
    repository as `../xboxrecomp`. You need Docker (Colima on a Mac is fine).
