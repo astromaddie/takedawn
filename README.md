@@ -237,7 +237,7 @@ report zip from Advanced > Create bug report helps a lot.
 | Android devices without a Snapdragon chip (Mali, PowerVR, Xclipse graphics) | Not supported yet. If the device's own driver supports Vulkan 1.3, it might work |
 | Samsung Galaxy S23 FE (Exynos 2200, Xclipse graphics) | Starts on the phone's own driver, but slow: about 30 fps even at render scale 1 |
 | An Adreno device's own driver instead of the bundled one | Not supported yet. If it supports Vulkan 1.3, it might work; the bundled driver is the default |
-| Steam Frame (VR) | Experimental, built from source. Played in the headset twice; holds 120 Hz. See [Steam Frame](#steam-frame-vr-experimental) |
+| Steam Frame (VR) | Experimental, built from source. Holds 120 Hz in the headset. See [Steam Frame](#steam-frame-vr-experimental) |
 
 ### System requirements
 
@@ -492,9 +492,8 @@ stereo 3D around you: every picture the game draws gets drawn again for each
 eye, and you can look around the car. The HUD sits on its own panel in front
 of you. Menus, the garage and films show on a big screen.
 
-It's early, but it plays well: it has been played in the headset twice and
-holds 120 Hz with the game at its usual 60. There's no download for it;
-you build it yourself:
+It's early, but it plays well and holds 120 Hz with the game at its usual
+60. There's no download for it; you build it yourself:
 
 1. Check out the xboxrecomp toolkit's `takedawn` branch next to this
    repository as `../xboxrecomp`. You need Docker (Colima on a Mac is fine).

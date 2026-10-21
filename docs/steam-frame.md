@@ -9,10 +9,6 @@ title, and draws every race picture again for each eye. The headset runs at
 SteamVR's recommended size (2160x2160 at the 100% resolution setting) and
 the whole frame, both eyes included, costs about 9.5 ms of GPU time.
 
-It has been played in the headset twice on 2026-10-21. The first session's
-findings are under "After the first wear"; the second session ran a build
-with those fixes, and it played well.
-
 The toolkit side (OpenXR, the stereo replay, the headset loop) is in the
 toolkit (xenophobentx/xboxrecomp, `takedawn` branch): `src/d3d/nv2a_vk_xr.c`,
 the "stereo" part of `src/d3d/nv2a_pb_vulkan.c`, `D3D8_GLSL_STEREO` in
@@ -131,16 +127,6 @@ new profile, driven by `tools/headless/to_first_race.sh`), 2026-10-20 and
 | GPU time a frame | 4.8 ms at 1728x1728 eyes, 9.5 ms at 2160x2160, 12 ms at 2700x2700 (too much), 12 ms with 2x MSAA at 2160 |
 | Geometry | with the eye matrix set to identity the eyes equal the flat picture (mean difference 0.00); with real views, parallax and field of view as computed |
 | Audio | 0 underruns in a stereo race at 120 Hz (`RECOMP_TRACE=audio_host`). Not listened to |
-
-## After the first wear
-
-| Seen in the headset | Change | Checked |
-|---|---|---|
-| Looked like 1024x768 | Eyes at the recommended size (2160, was 1728), anisotropic filtering, no CPU wait before handing images to SteamVR (that wait cost refreshes at 2160) | Unattended: 120 Hz, 0 missed; worn in the second session |
-| Billboard trees sliding, traffic-light glows floating | Screen-position draws rebuilt in 3D | Picture dumps: smoke, skid marks, glows in place; worn in the second session |
-| Semi-truck wheels sliding in | Draws whose projection can't be read take the last 3D draw's | Worn in the second session; the trucks not caught in a dump |
-| The screen flickering between sizes at crashes and the finish | Everything in an event immersive | Unattended; worn in the second session |
-| Letterbox bars | Composite stretched, bars left out; the crash cameras' bars by their shape | Race bars gone in dumps |
 
 ## Known issues
 
