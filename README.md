@@ -1,3 +1,27 @@
+## Steam Frame
+
+The experimental Frame VR build is on [`steam-frame-vr`](https://github.com/astromaddie/takedawn/tree/steam-frame-vr).
+It runs natively on Linux ARM64 with Vulkan and OpenXR, with stereo races, a
+floating HUD, cinema-screen menus and Frame controller bindings.
+
+Use the matching `steam-frame-vr` branch of this fork's
+[xboxrecomp toolkit](https://github.com/astromaddie/xboxrecomp/tree/steam-frame-vr),
+in a sibling folder named `xboxrecomp`. Clone both into the same parent directory:
+
+```sh
+git clone --recurse-submodules --branch steam-frame-vr https://github.com/astromaddie/xboxrecomp.git
+git clone --recurse-submodules --branch steam-frame-vr https://github.com/astromaddie/takedawn.git
+cd takedawn
+```
+
+The [Frame build and installation guide](https://github.com/astromaddie/takedawn/blob/steam-frame-vr/docs/steam-frame.md)
+covers the Docker toolchain, code generation, packaging and Steam setup.
+You need your own supported North American Xbox disc data.
+
+The upstream flat-screen README for `main` follows.
+
+---
+
 <p align="center">
   <img src="assets/icon/takedawn.svg" alt="The Takedawn icon: a crimson letter T on a navy panel" width="128">
 </p>
